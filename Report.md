@@ -1,0 +1,4 @@
+- The problem statement and solution approach.
+- A detailed workflow of the model.
+- Challenges faced & how they were solved.
+- Future improvements (what can be optimized further).
