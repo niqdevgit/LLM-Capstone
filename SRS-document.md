@@ -1,0 +1,6 @@
+- Scope of the project
+- Requirements
+- Functional requirements
+- Non functional requirements
+- Use case Diagrams (if possible)
+- Example use cases
