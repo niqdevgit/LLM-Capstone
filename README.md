@@ -1,10 +1,10 @@
 # LLM-Capstone
 ## Table of contents
 - [Project overview](#Project-overview)
-- Technologies used (models, frameworks, datasets)
-- Installation instructions (how to set up and run the project)
-- Usage guide (how to interact with the application)
-- Team contributions (who did what in the project)
+- [Technologies used](#Technologies-used)
+- [Installation instructions](#Installation-instructions)
+- [Usage guide](#Usage-guide)
+- [Team](#Team)
 - SRS document
   - Scope of the project
   - Requirements
@@ -17,18 +17,39 @@
   - A detailed workflow of the model.
   - Challenges faced & how they were solved.
   - Future improvements (what can be optimized further).
-- Performance evaluation
-  - Provide evaluation metrics (accuracy, latency, efficiency) based on
-relevant datasets.
-  - Compare the model’s performance with baseline results.
-- Videos
+- [Performance evaluation](#Performance-evaluation)
+- [Provide evaluation metrics](#Provide-evaluation-metrics)
+- [Baseline results](#Baseline-results)
+- Videos:
   - Week 1
   - Week 2
   - Week 3 (Final)
-- Timetable
+- [Timetable](#Timetable)
 
 ## Project overview
 (what the project does)
+
+## Technologies used
+(models, frameworks, datasets)
+
+## Installation instructions
+(how to set up and run the project)
+
+## Usage guide
+(how to interact with the application)
+
+## Team
+I made this as solo project.
+People who helped me:
+
+## Performance evaluation
+### Provide evaluation metrics
+(accuracy, latency, efficiency) based on
+relevant datasets.
+### Baseline results
+Compare the model’s performance with baseline results.
+
+
 
 ## Timetable
 ### Week 1 5.3 - 11.3
