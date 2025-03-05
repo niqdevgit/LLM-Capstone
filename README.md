@@ -5,26 +5,17 @@
 - [Installation instructions](#Installation-instructions)
 - [Usage guide](#Usage-guide)
 - [Team](#Team)
-- SRS document
-  - Scope of the project
-  - Requirements
-  - Functional requirements
-  - Non functional requirements
-  - Use case Diagrams (if possible)
-  - Example use cases
-- Report
-  - The problem statement and solution approach.
-  - A detailed workflow of the model.
-  - Challenges faced & how they were solved.
-  - Future improvements (what can be optimized further).
 - [Performance evaluation](#Performance-evaluation)
 - [Provide evaluation metrics](#Provide-evaluation-metrics)
 - [Baseline results](#Baseline-results)
-- Videos:
-  - Week 1
-  - Week 2
-  - Week 3 (Final)
 - [Timetable](#Timetable)
+- [Links](#Links)
+  - [SRS document](https://github.com/niqdevgit/LLM-Capstone/blob/main/SRS-document.md)
+  - [Report](https://github.com/niqdevgit/LLM-Capstone/blob/main/Report.md)
+  - Videos:
+    - Week 1
+    - Week 2
+    - Week 3 (Final)
 
 ## Project overview
 (what the project does)
@@ -49,8 +40,6 @@ relevant datasets.
 ### Baseline results
 Compare the model’s performance with baseline results.
 
-
-
 ## Timetable
 ### Week 1 5.3 - 11.3
 - Initialize repository
@@ -61,3 +50,8 @@ Compare the model’s performance with baseline results.
 ### Week 3 19.3-25.3
 - Evaluate the model (or fix it)
 - Finalize the project
+
+## Links
+Report, SRS document and videos are external from this readme. 
+
+Use [Table of contents](#Table-of-contents) to navigate to them.
