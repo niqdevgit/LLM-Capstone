@@ -14,7 +14,7 @@ Project 06: Bittium #4_Can AI Generate Valid IP-XACT Components?
   - [SRS document](https://github.com/niqdevgit/LLM-Capstone/blob/main/SRS-document.md)
   - [Report](https://github.com/niqdevgit/LLM-Capstone/blob/main/Report.md)
   - Videos:
-    - Week 1
+    - [Week 1](https://tuni.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ca80c133-6634-42ae-8bc3-b29b010a4bfb)
       * Showcases the project initialization
       * Explains what IP-XACT is / point of the project
       * Outlines the plan and next steps
@@ -102,13 +102,13 @@ relevant datasets.
 Compare the model’s performance with baseline results.
 
 ## Timetable
-### Week 1 5.3 - 11.3
+### **Week 1** 5.3 - 11.3
 - Initialize repository
 - Familiarize yourself with the project
 - Plan the project
-### Week 2 12.3 - 18.3
+### **Week 2** 12.3 - 18.3
 - Gather data, select a model, and fine-tune it
-### Week 3 19.3-25.3
+### **Week 3** 19.3-25.3
 - Evaluate the model (or fix it)
 - Finalize the project
 
