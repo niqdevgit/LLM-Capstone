@@ -102,13 +102,13 @@ relevant datasets.
 Compare the model’s performance with baseline results.
 
 ## Timetable
-### **Week 1** 5.3 - 11.3
+### Week 1 (5.3 - 11.3)
 - Initialize repository
 - Familiarize yourself with the project
 - Plan the project
-### **Week 2** 12.3 - 18.3
+### Week 2 (12.3 - 18.3)
 - Gather data, select a model, and fine-tune it
-### **Week 3** 19.3-25.3
+### Week 3 (19.3-25.3)
 - Evaluate the model (or fix it)
 - Finalize the project
 
