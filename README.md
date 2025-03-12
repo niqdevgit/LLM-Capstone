@@ -92,7 +92,9 @@ This project is ideal for students interested in AI-powered hardware design auto
 
 ## Team
 I made this as solo project.
-People who helped me:
+
+My mentor at Tuni side: Shahbaz Siddeeq
+
 
 ## Performance evaluation
 ### Provide evaluation metrics
