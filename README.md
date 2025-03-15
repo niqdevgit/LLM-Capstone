@@ -85,8 +85,27 @@ This project is ideal for students interested in AI-powered hardware design auto
 (models, frameworks, datasets)
 
 ## Installation instructions
-(how to set up and run the project)
+How to set up and run the project
 
+### Frontend
+We assume that npm is installed
+go to frontend folder 
+npm i
+npm run dev
+(Might docker this)
+
+### Backend
+We assume that your PC has python installed. If not, go [here](https://www.python.org/)
+Create and activate venv. [Instructions](https://docs.python.org/3/library/venv.html)
+
+Run command on backend folder in activated venv:
+````
+pip install requirements.txt 
+````
+Run the app:
+````
+python main.py
+````
 ## Usage guide
 (how to interact with the application)
 
@@ -111,6 +130,8 @@ Compare the model’s performance with baseline results.
 ### Week 2 (12.3 - 18.3)
 - Gather data, select a model, and fine-tune it
 ### Week 3 (19.3-25.3)
+- How to add kakctus2 to loop
+- Docker if possible
 - Evaluate the model (or fix it)
 - Finalize the project
 

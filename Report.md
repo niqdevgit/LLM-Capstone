@@ -17,11 +17,28 @@ By leveraging AI to generate and validate IP-XACT components, this approach sign
 
 ## Detailed Workflow of the Model
 
-*(To be filled after implementation.)*
+1. Model gets prompt
+2. model makes answer
+3. Model returns answer
 
 ## Challenges Faced & How They Were Solved
 
 *(To be filled after implementation.)*
+
+### model selection
+I tried many models for IP-XACT creation:
+* https://huggingface.co/codemateai/CodeMate-v0.1 but it was too big for google colab. About 7 * 20 gb 
+* https://huggingface.co/Salesforce/codet5-small But it did not perform at all, the outputs it gave to basic prompts were nonsense.
+* https://huggingface.co/Salesforce/codet5-base Same issues as codet5-small
+* https://huggingface.co/Salesforce/codet5-large Same issues as codet5-small
+* Deepseek does not have HF template https://huggingface.co/deepseek-ai/DeepSeek-R1
+* Failed to load https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct
+* model="facebook/bart-large" issue: not understanding context
+* model="t5-small" issue: not understanding context
+* model gpt2 issue: wild hallusinations
+* gpt2-large finaly gave something that was in the right direction. But when i fine-tuned it: CUDA out of memory. Tried to allocate 246.00 MiB. GPU 0 has a total capacity of 14.74 GiB of which 2.12 MiB is free.
+
+gpt-medium i was able to fine-tune
 
 ## Future Improvements
 
