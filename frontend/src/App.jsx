@@ -11,7 +11,7 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/generate-ipxact", {
+      const response = await axios.post("http://localhost:127.0.0.1:5000/generate", {
         description,
       });
       setXmlResponse(response.data.xml); // assuming the backend sends the XML in this format
@@ -39,6 +39,7 @@ function App() {
         rows="6"
         cols="50"
       />
+      <p></p>
       <button onClick={handleSubmit} disabled={loading}>
         {loading ? "Generating..." : "Generate IP-XACT"}
       </button>
