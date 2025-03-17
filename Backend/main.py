@@ -9,11 +9,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # Allow all CORS
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all CORS
 
 # Load API key from environment variable (for security)
 HF_API_KEY = os.getenv("HF_API_KEY")
-HF_MODEL_URL = "https://api-inference.huggingface.co/models/YOUR_MODEL_NAME"
+HF_MODEL_URL = "https://api-inference.huggingface.co/models/niklassuvitie/gpt2-medium-ipxact"
 
 headers = {"Authorization": f"Bearer {HF_API_KEY}"}
 
@@ -40,8 +40,8 @@ def validate_with_kactus2(xml_content):
 @app.route("/generate", methods=["POST"])
 def generate():
     data = request.json
-    prompt = data.get("prompt", "")
-    
+    prompt = data.get("description", "")
+    print(prompt)
     if not prompt:
         return jsonify({"error": "No prompt provided"}), 400
     
@@ -50,18 +50,21 @@ def generate():
     if response.status_code != 200:
         return jsonify({"error": "Failed to generate response", "details": response.text}), 500
     
-    generated_component = response.json()
-    xml_content = generated_component.get("generated_xml", "")
+    #generated_component = response.json()
+    #xml_content = generated_component.get("generated_xml", "")
     
-    if not xml_content:
-        return jsonify({"error": "Model did not return a valid XML component"}), 500
+    #if not xml_content:
+    #    return jsonify({"error": "Model did not return a valid XML component"}), 500
     
-    is_valid, validation_message = validate_with_kactus2(xml_content)
+    #is_valid, validation_message = validate_with_kactus2(xml_content)
     
-    if not is_valid:
-        return jsonify({"error": "Generated component is invalid", "details": validation_message}), 400
+    #if not is_valid:
+    #    return jsonify({"error": "Generated component is invalid", "details": validation_message}), 400
     
-    return jsonify({"component": xml_content, "validation": validation_message})
+    #return jsonify({"component": xml_content, "validation": validation_message})
+    return jsonify(response.json()), 200
+
+    
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")

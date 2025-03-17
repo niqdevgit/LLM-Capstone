@@ -11,10 +11,10 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:127.0.0.1:5000/generate", {
+      const response = await axios.post("http://localhost:5000/generate", {
         description,
       });
-      setXmlResponse(response.data.xml); // assuming the backend sends the XML in this format
+      setXmlResponse(response.data); // assuming the backend sends the XML in this format
     } catch (error) {
       console.error("Error while generating IP-XACT component:", error);
     } finally {
@@ -48,10 +48,11 @@ function App() {
         <div className="xml-response">
           <textarea
             readOnly
-            value={xmlResponse}
+            value={JSON.stringify(xmlResponse)}
             rows="10"
             cols="50"
           />
+          <p></p>
           <button onClick={handleCopy}>Copy XML</button>
         </div>
       )}

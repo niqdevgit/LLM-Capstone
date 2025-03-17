@@ -90,11 +90,15 @@ How to set up and run the project
 
 Have [Docker](https://www.docker.com/) installed and engine running
 
-Clone the repo, then run.
+1. Clone the repo.
+2. Set Hugging Face Token to your .env on backend folder.
+  * HF_API_KEY = XXXXXXXXXXXXXX
+  * Get your key from [Hugging Face](https://huggingface.co/settings/tokens)
+3. Then run:
 ````
 docker-compose up --build
 ````
-
+By deafault the UI will run on [http://localhost:3000/](http://localhost:3000/)
 ## Usage guide
 (how to interact with the application)
 
@@ -120,6 +124,9 @@ Compare the model’s performance with baseline results.
 - Gather data, select a model, and fine-tune it
 - Docker
 ### Week 3 (19.3-25.3)
+* Need help on:
+  * kakctus2 CLI?
+  * Better model/fine-tune. BERT?
 - How to add kakctus2 to loop
 - Evaluate the model (or fix it)
 - Finalize the project
