@@ -80,9 +80,9 @@ If successful, this system could automate part of the hardware design workflow, 
 This project is ideal for students interested in AI-powered hardware design automation. If you're looking for a challenge at the intersection of machine learning, structured data, and EDA, this is your opportunity to push AI beyond text and into the world of automated chip design.  
 
 
-
 ## Technologies used
 (models, frameworks, datasets)
+[Colab](https://github.com/niqdevgit/LLM-Capstone/blob/main/Capstone.ipynb) for fine-tuning
 
 ## Installation instructions
 How to set up and run the project
