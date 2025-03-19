@@ -82,8 +82,12 @@ This project is ideal for students interested in AI-powered hardware design auto
 
 ## Technologies used
 (models, frameworks, datasets)
-[Colab](https://github.com/niqdevgit/LLM-Capstone/blob/main/Capstone.ipynb) for fine-tuning
-Docker
+* [Colab](https://github.com/niqdevgit/LLM-Capstone/blob/main/Capstone.ipynb) for fine-tuning
+* Gpt2-medium
+* [IP-XACT standard](https://www.accellera.org/images/downloads/standards/ip-xact/IPXACT-2022_user_guide.pdf)
+* Docker
+* React
+* Flask
 
 ## Installation instructions
 How to set up and run the project
