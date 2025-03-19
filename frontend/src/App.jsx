@@ -30,8 +30,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ paddingLeft: "30px" }}>
       <h1>IP-XACT Generator</h1>
+      <p>Please note that Hugging Face API needs to "wake up"</p>
+      <p>So first request will likely fail, try again in 30 seconds</p>
       <textarea
         placeholder="Describe your component"
         value={description}

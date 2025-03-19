@@ -83,7 +83,7 @@ This project is ideal for students interested in AI-powered hardware design auto
 ## Technologies used
 (models, frameworks, datasets)
 * [Colab](https://github.com/niqdevgit/LLM-Capstone/blob/main/Capstone.ipynb) for fine-tuning
-* Gpt2-medium
+* Gpt2-medium model
 * [IP-XACT standard](https://www.accellera.org/images/downloads/standards/ip-xact/IPXACT-2022_user_guide.pdf)
 * Docker
 * React
@@ -104,20 +104,27 @@ docker-compose up --build
 ````
 By deafault the UI will run on [http://localhost:3000/](http://localhost:3000/)
 ## Usage guide
-(how to interact with the application)
+UI is obnoxiously simple. Give your prompt to it and hit the generate button. After a while, you get your result.  
+Please note that there is no error handling. It's good to have the developer network tab open so you can see if the API call fails.  
+
+
+![UI](readme-images\usage.png)
 
 ## Team
 I made this as solo project.
 
-My mentor at Tuni side: Shahbaz Siddeeq
+My mentor at Tuni side: _Shahbaz Siddeeq_
 
+A classmate I discussed ideas with: _Arash Ghasemzadeh Kakroudi_  
 
 ## Performance evaluation
-### Provide evaluation metrics
-(accuracy, latency, efficiency) based on
-relevant datasets.
-### Baseline results
-Compare the model’s performance with baseline results.
+With this prompt:
+
+**"Generate an IP-XACT component for a simple 32-bit memory-mapped register. Output in xml format"**
+
+![Evaluation pre, and after fine-tune](readme-images\evaluation.png)
+
+The fine-tuned version gave something that might resemble XML, so win, I guess?
 
 ## Timetable
 ### Week 1 (5.3 - 11.3)
@@ -128,9 +135,6 @@ Compare the model’s performance with baseline results.
 - Gather data, select a model, and fine-tune it
 - Docker
 ### Week 3 (19.3-25.3)
-* Need help on:
-  * kakctus2 CLI?
-  * Better model/fine-tune. BERT?
 - How to add kakctus2 to loop
 - Evaluate the model (or fix it)
 - Finalize the project
