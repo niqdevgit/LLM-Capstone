@@ -108,7 +108,7 @@ UI is obnoxiously simple. Give your prompt to it and hit the generate button. Af
 Please note that there is no error handling. It's good to have the developer network tab open so you can see if the API call fails.  
 
 
-![UI](readme-images\usage.png)
+![UI](readme-images/usage.png)
 
 ## Team
 I made this as solo project.
@@ -122,7 +122,7 @@ With this prompt:
 
 **"Generate an IP-XACT component for a simple 32-bit memory-mapped register. Output in xml format"**
 
-![Evaluation pre, and after fine-tune](readme-images\evaluation.png)
+![Evaluation pre, and after fine-tune](readme-images/evaluation.png)
 
 The fine-tuned version gave something that might resemble XML, so win, I guess?
 
