@@ -11,6 +11,9 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all CORS
 
+K2XML_DIR = "/k2xml"
+XML_FILE_PATH = os.path.join(K2XML_DIR, "input.xml")
+
 # Load API key from environment variable (for security)
 HF_API_KEY = os.getenv("HF_API_KEY")
 HF_MODEL_URL = "https://api-inference.huggingface.co/models/niklassuvitie/gpt2-medium-ipxact"
@@ -49,20 +52,43 @@ def generate():
     
     if response.status_code != 200:
         return jsonify({"error": "Failed to generate response", "details": response.text}), 500
-    
-    #generated_component = response.json()
-    #xml_content = generated_component.get("generated_xml", "")
-    
-    #if not xml_content:
-    #    return jsonify({"error": "Model did not return a valid XML component"}), 500
-    
-    #is_valid, validation_message = validate_with_kactus2(xml_content)
-    
-    #if not is_valid:
-    #    return jsonify({"error": "Generated component is invalid", "details": validation_message}), 400
-    
-    #return jsonify({"component": xml_content, "validation": validation_message})
-    return jsonify(response.json()), 200
+
+    generated_text = response.json()
+
+    xml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+                        <root>
+                            <data>{generated_text}</data>
+                        </root>"""
+
+    os.makedirs(K2XML_DIR, exist_ok=True)
+
+    with open(XML_FILE_PATH, "w", encoding="utf-8") as xml_file:
+        xml_file.write(xml_content)
+
+
+    def run_k2xml():
+        print('first')
+        process = subprocess.run(["timeout", "5s", "mono", "/app/k2xml/K2XML_Converter.exe"], capture_output=True, text=True)
+        print('subprosess')
+        print(process.stdout)
+        return process.stdout
+
+    print('before func call')
+    k2result = run_k2xml()
+    if "Data at the root level is invalid" not in k2result:
+        k2xml_status = False
+    else:
+        k2xml_status = True
+
+    hf_response = response.json()
+
+    # Create a new response object including k2xml status
+    final_response = {
+        "generated_text": hf_response[0].get("generated_text", ""),
+        "k2xml": k2xml_status
+    }
+
+    return jsonify(final_response), 200
 
     
 
