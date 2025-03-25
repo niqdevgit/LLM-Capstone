@@ -88,6 +88,7 @@ This project is ideal for students interested in AI-powered hardware design auto
 * Docker
 * React
 * Flask
+* [k2xml_converter](https://github.com/niqdevgit/k2xml_converter)
 
 ## Installation instructions
 How to set up and run the project
