@@ -5,6 +5,7 @@ function App() {
   const [description, setDescription] = useState("");
   const [xmlResponse, setXmlResponse] = useState("");
   const [loading, setLoading] = useState(false);
+  const [validationStatus, setValidationStatus] = useState(null); // New state for validation status
 
   const handleSubmit = async () => {
     if (!description) return;
@@ -14,7 +15,9 @@ function App() {
       const response = await axios.post("http://localhost:5000/generate", {
         description,
       });
-      setXmlResponse(response.data); // assuming the backend sends the XML in this format
+
+      setXmlResponse(response.data.generated_text || ""); // Store generated text
+      setValidationStatus(response.data.k2xml); // Update validation status
     } catch (error) {
       console.error("Error while generating IP-XACT component:", error);
     } finally {
@@ -46,11 +49,20 @@ function App() {
         {loading ? "Generating..." : "Generate IP-XACT"}
       </button>
 
+      {/* Validation Status */}
+      {validationStatus !== null && (
+        <p style={{ color: validationStatus ? "green" : "red" }}>
+          {validationStatus
+            ? "Kakctus2 validation success"
+            : "Kakctus2 validation failed"}
+        </p>
+      )}
+
       {xmlResponse && (
         <div className="xml-response">
           <textarea
             readOnly
-            value={JSON.stringify(xmlResponse)}
+            value={xmlResponse}
             rows="10"
             cols="50"
           />
