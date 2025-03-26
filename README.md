@@ -19,7 +19,7 @@ Project 06: Bittium #4_Can AI Generate Valid IP-XACT Components?
       * Explains what IP-XACT is / point of the project
       * Outlines the plan and next steps
     - [Week 2](https://moodle.tuni.fi/mod/assign/view.php?id=3533242)
-    - Week 3 (Final)
+    - [Week 3 (no video, just the presentation)](https://github.com/niqdevgit/LLM-Capstone/blob/main/niq-LLM-Capstone-final.pdf)
 
 ## Project overview
 Project description states:
